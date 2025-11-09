@@ -1,0 +1,12 @@
+# Ignore VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Local environment variables (if you use)
+backend/.env
