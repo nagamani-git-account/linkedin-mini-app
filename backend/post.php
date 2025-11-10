@@ -1,6 +1,4 @@
 <?php
-require_once _DIR_.'/cors.php';
-session_start();
 header('Content-Type: application/json');
 session_start();
 if (!isset($_SESSION['user'])) {

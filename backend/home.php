@@ -40,9 +40,8 @@ $user = $_SESSION['user']; // id, name, email
   </div>
 
   <script>
-    const API = "";
     async function logout(){
-      await fetch('${API}/logout.php', {method:'POST', credentials:'include'});
+      await fetch('logout.php', {method:'POST', credentials:'include'});
       window.location.href = 'index.html';
     }
 
@@ -52,7 +51,7 @@ $user = $_SESSION['user']; // id, name, email
       const feed = document.getElementById('feed');
       feed.textContent = 'Loading...';
       try {
-        const res = await fetch('${API}/get_posts.php', {credentials:'include'});
+        const res = await fetch('get_posts.php', {credentials:'include'});
         const html = await res.text();
         feed.innerHTML = html || '<div class="post muted">No posts yet.</div>';
       } catch(e){
@@ -66,7 +65,7 @@ $user = $_SESSION['user']; // id, name, email
       const content = document.getElementById('content').value.trim();
       if (!content) return;
       try {
-        const res = await fetch('${API}/post.php', {
+        const res = await fetch('post.php', {
           method:'POST',
           headers:{'Content-Type':'application/json'},
           credentials:'include',

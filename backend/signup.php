@@ -1,6 +1,4 @@
 <?php
-require_once _DIR_.'/cors.php';
-session_start();
 declare(strict_types=1);
 
 // show errors while we debug
